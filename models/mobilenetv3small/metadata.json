@@ -1,0 +1,11 @@
+{
+  "source_sha256": "71bcb1fc43a5b1afaf61c7721fcc145a59d0450fe3854ee28a42a15498c478b3",
+  "classes": [
+    "Industrial",
+    "Minimalist",
+    "Modern",
+    "Scandinavian"
+  ],
+  "input": "224x224 RGB float32 [0,255]; embedded scaling to [-1,1]",
+  "output": "Identity:0"
+}
