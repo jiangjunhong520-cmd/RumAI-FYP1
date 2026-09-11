@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="430" viewBox="0 0 640 430">
+<title>Fold sofa — prototype sofa illustration</title><desc>Modern; Coral and Dark wood; Textured performance weave; Asymmetric modular sofa. Concept only, not a product photograph.</desc>
+<defs><pattern id="fabric" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2h7M2 0v7" stroke="#fff" stroke-opacity=".15" stroke-width=".7"/></pattern><clipPath id="sofa"><rect x="96" y="145" width="448" height="130" rx="12"/></clipPath></defs>
+<rect width="640" height="430" fill="#f2f0ea"/>
+<text x="24" y="32" font-family="Arial,sans-serif" font-size="12" fill="#66665e" letter-spacing="2">MODERN / PROTOTYPE ASSET</text>
+<ellipse cx="320" cy="310" rx="245" ry="15" fill="#ddd9cf"/>
+<path d="M121 265l-8 39M519 265l8 39" stroke="rgb(65,48,39)" stroke-width="9"/>
+<rect x="96" y="145" width="448" height="120" rx="12" fill="rgb(207,116,105)" stroke="#000" stroke-opacity=".16"/>
+<rect x="96" y="228" width="448" height="48" rx="12" fill="rgb(207,116,105)" stroke="#000" stroke-opacity=".16"/>
+<path d="M245.33333333333334 158v94" stroke="#000" opacity=".13"/><path d="M394.6666666666667 158v94" stroke="#000" opacity=".13"/><rect x="0" y="0" width="640" height="330" fill="url(#fabric)" clip-path="url(#sofa)"/>
+<rect x="84" y="205" width="35" height="77" rx="6" fill="rgb(207,116,105)" stroke="#000" stroke-opacity=".14"/><rect x="521" y="205" width="35" height="77" rx="6" fill="rgb(207,116,105)" stroke="#000" stroke-opacity=".14"/>
+
+<rect x="128" y="175" width="46" height="45" rx="8" fill="rgb(65,48,39)" transform="rotate(-8 151 197)"/>
+<text x="24" y="353" font-family="Arial,sans-serif" font-size="20" fill="#292c28">Fold sofa</text>
+<text x="24" y="378" font-family="Arial,sans-serif" font-size="12" fill="#62645d">Textured performance weave · Asymmetric modular sofa</text>
+<text x="24" y="406" font-family="Arial,sans-serif" font-size="11" fill="#74766e">SOFA-MOD-10 · SAMPLE ILLUSTRATION — NOT A PRODUCT PHOTO</text></svg>
