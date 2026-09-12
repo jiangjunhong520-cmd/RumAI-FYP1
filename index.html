@@ -25,33 +25,7 @@
       <div class="workspace">
         <section class="panel upload-panel" aria-labelledby="upload-title"><div class="step-heading"><span class="step">01</span><h3 id="upload-title">Start with your space</h3></div>
           <div class="upload-area" id="upload-area"><div id="upload-prompt"><span class="upload-symbol" aria-hidden="true">＋</span><h4>A new look starts here</h4><p>Choose a clear photo of your living room.</p></div><img id="preview" alt="Your uploaded living room" hidden><label for="file-input" class="button dark upload-control"><span id="upload-button">Upload Room Image</span></label><div class="upload-diagnostics"><p class="small">Upload diagnostic v2 — native picker</p><input type="file" id="file-input" accept="image/*" aria-labelledby="upload-button" aria-describedby="file-note upload-debug"><p id="upload-debug" class="small" role="status">Diagnostic script has not started.</p><button type="button" id="inspect-upload">Check tap target</button><pre id="upload-layout"></pre></div><p class="small" id="file-note">JPG, PNG or WebP · up to 15 MB</p></div>
-          <script>
-          // Temporary diagnostics run immediately, independently of deferred AI scripts.
-          (() => {
-            const picker = document.getElementById('file-input');
-            const debug = document.getElementById('upload-debug');
-            const report = document.getElementById('upload-layout');
-            debug.textContent = 'v2 ready. Tap Choose file. No selection yet.';
-            picker.addEventListener('pointerdown', () => { debug.textContent = 'Pointer reached native input.'; });
-            picker.addEventListener('click', () => { debug.textContent = 'Native input click received; waiting for selection.'; });
-            // Capture filename before the existing processing handler clears input.value.
-            picker.addEventListener('change', () => {
-              debug.textContent = 'change fired: ' + (picker.files[0]?.name || 'no file');
-            }, true);
-            picker.addEventListener('cancel', () => { debug.textContent = 'Picker cancelled; no new file selected.'; });
-            document.getElementById('inspect-upload').onclick = () => {
-              const rect = picker.getBoundingClientRect();
-              const css = getComputedStyle(picker);
-              const top = document.elementFromPoint(rect.left + rect.width / 2, rect.top + rect.height / 2);
-              report.textContent = JSON.stringify({size: [Math.round(rect.width), Math.round(rect.height)],
-                position: [Math.round(rect.left), Math.round(rect.top)], display: css.display,
-                opacity: css.opacity, pointerEvents: css.pointerEvents, zIndex: css.zIndex,
-                disabled: picker.disabled, labels: picker.labels.length,
-                centreHit: top ? top.tagName + '#' + top.id : 'outside viewport',
-                serviceWorkerControlled: !!navigator.serviceWorker?.controller}, null, 2);
-            };
-          })();
-          </script>
+         
           <p class="small privacy">Your photo stays in this browser. Nothing is uploaded.</p><p id="upload-status" class="status" role="status"></p>
           <section id="room-palette" class="room-palette" aria-labelledby="palette-title" hidden>
             <h3 id="palette-title">Your room palette</h3>
