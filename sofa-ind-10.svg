@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="430" viewBox="0 0 640 430">
+<title>Beam sofa — prototype sofa illustration</title><desc>Industrial; Concrete and Graphite steel; Felted wool and steel; High-back two-seater. Concept only, not a product photograph.</desc>
+<defs><pattern id="fabric" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2h7M2 0v7" stroke="#fff" stroke-opacity=".15" stroke-width=".7"/></pattern><clipPath id="sofa"><rect x="175" y="115" width="290" height="130" rx="5"/></clipPath></defs>
+<rect width="640" height="430" fill="#f2f0ea"/>
+<text x="24" y="32" font-family="Arial,sans-serif" font-size="12" fill="#66665e" letter-spacing="2">INDUSTRIAL / PROTOTYPE ASSET</text>
+<ellipse cx="320" cy="310" rx="245" ry="15" fill="#ddd9cf"/>
+<path d="M200 265l-8 39M440 265l8 39" stroke="rgb(48,50,51)" stroke-width="12"/>
+<rect x="175" y="115" width="290" height="120" rx="5" fill="rgb(150,153,149)" stroke="#000" stroke-opacity=".16"/>
+<rect x="175" y="228" width="290" height="48" rx="5" fill="rgb(150,153,149)" stroke="#000" stroke-opacity=".16"/>
+<path d="M320 158v94" stroke="#000" opacity=".13"/><rect x="0" y="0" width="640" height="330" fill="url(#fabric)" clip-path="url(#sofa)"/>
+<rect x="163" y="205" width="35" height="77" rx="2.5" fill="rgb(150,153,149)" stroke="#000" stroke-opacity=".14"/><rect x="442" y="205" width="35" height="77" rx="2.5" fill="rgb(150,153,149)" stroke="#000" stroke-opacity=".14"/>
+
+<rect x="207" y="175" width="46" height="45" rx="8" fill="rgb(48,50,51)" transform="rotate(-8 230 197)"/>
+<text x="24" y="353" font-family="Arial,sans-serif" font-size="20" fill="#292c28">Beam sofa</text>
+<text x="24" y="378" font-family="Arial,sans-serif" font-size="12" fill="#62645d">Felted wool and steel · High-back two-seater</text>
+<text x="24" y="406" font-family="Arial,sans-serif" font-size="11" fill="#74766e">SOFA-IND-10 · SAMPLE ILLUSTRATION — NOT A PRODUCT PHOTO</text></svg>
