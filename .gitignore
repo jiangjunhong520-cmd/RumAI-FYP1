@@ -3,7 +3,6 @@ benchmark/
 *.test.cjs
 *.py
 *.pyc
-*.mjs
 *.cmd
 __pycache__/
 input-*.bin
