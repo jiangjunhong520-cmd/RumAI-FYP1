@@ -1,0 +1,17 @@
+.phone-tools/
+benchmark/
+*.test.cjs
+*.py
+*.pyc
+*.mjs
+*.cmd
+__pycache__/
+input-*.bin
+inference-reference.json
+inference-verification.json
+scale-validation-results.json
+QUICK-LOOK.md
+README.md
+*.cjs
+*.md
+assets/sample-sofa-usdz-textures/

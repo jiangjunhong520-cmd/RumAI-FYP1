@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="430" viewBox="0 0 640 430">
+<title>Mono sofa — prototype sofa illustration</title><desc>Minimalist; Off-black and Tonal upholstery; Matte leather; Floating-base sofa. Concept only, not a product photograph.</desc>
+<defs><pattern id="fabric" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 2h7M2 0v7" stroke="#fff" stroke-opacity=".15" stroke-width=".7"/></pattern><clipPath id="sofa"><rect x="120" y="145" width="400" height="130" rx="12"/></clipPath></defs>
+<rect width="640" height="430" fill="#f2f0ea"/>
+<text x="24" y="32" font-family="Arial,sans-serif" font-size="12" fill="#66665e" letter-spacing="2">MINIMALIST / PROTOTYPE ASSET</text>
+<ellipse cx="320" cy="310" rx="245" ry="15" fill="#ddd9cf"/>
+<path d="M145 265l-8 39M495 265l8 39" stroke="rgb(58,58,57)" stroke-width="9"/>
+<rect x="120" y="145" width="400" height="120" rx="12" fill="rgb(40,40,39)" stroke="#000" stroke-opacity=".16"/>
+<rect x="120" y="228" width="400" height="48" rx="12" fill="rgb(40,40,39)" stroke="#000" stroke-opacity=".16"/>
+<path d="M253.33333333333334 158v94" stroke="#000" opacity=".13"/><path d="M386.6666666666667 158v94" stroke="#000" opacity=".13"/>
+<rect x="108" y="205" width="35" height="77" rx="6" fill="rgb(40,40,39)" stroke="#000" stroke-opacity=".14"/><rect x="497" y="205" width="35" height="77" rx="6" fill="rgb(40,40,39)" stroke="#000" stroke-opacity=".14"/>
+
+<rect x="152" y="175" width="46" height="45" rx="8" fill="rgb(58,58,57)" transform="rotate(-8 175 197)"/>
+<text x="24" y="353" font-family="Arial,sans-serif" font-size="20" fill="#292c28">Mono sofa</text>
+<text x="24" y="378" font-family="Arial,sans-serif" font-size="12" fill="#62645d">Matte leather · Floating-base sofa</text>
+<text x="24" y="406" font-family="Arial,sans-serif" font-size="11" fill="#74766e">SOFA-MIN-11 · SAMPLE ILLUSTRATION — NOT A PRODUCT PHOTO</text></svg>
