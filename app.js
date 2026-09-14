@@ -6,6 +6,11 @@ let photoURL;
 let uploadNumber = 0;
 let confirmedStyle = null;
 let roomPalette = [];
+let userPreferences = {
+  colour: [],
+  shape: [],
+  function: []
+};
 let rawPrediction = null;
 let selectionRevision = 0;
 let predictionTimer;
@@ -50,6 +55,12 @@ input.addEventListener('change', () => {
     document.querySelector('#file-note').textContent = file.name;
     confirmedStyle = null;
     rawPrediction = null;
+
+    if (preferencesSection) {
+  preferencesSection.hidden = true;
+  resetPreferences();
+}
+
     selectionRevision++;
     document.querySelectorAll('input[name="style"]').forEach(radio => { radio.checked = false; });
     confirmButton.disabled = true;
@@ -222,12 +233,217 @@ function showCollection() {
     document.querySelector('#sofa-grid').append(card);
   });
 }
-confirmButton.addEventListener('click', () => {
-  const style = document.querySelector('input[name="style"]:checked').value;
-  confirmedStyle = style;
-  showCollection();
-  document.querySelector('#collection-title').textContent = `A ${style.toLowerCase()} point of view.`;
+// --------------------------------------------------
+// Preference UI
+// --------------------------------------------------
 
-  document.querySelector('#style-status').textContent = `${style} confirmed. Recommendations update below when a photo and catalogue are available.`;
-  document.querySelector('#recommendations').scrollIntoView({ behavior: 'auto', block: 'start' });
+const preferencesSection = document.querySelector('#preferences');
+const applyPreferencesButton = document.querySelector('#apply-preferences');
+const preferenceStatus = document.querySelector('#preference-status');
+
+function getPreferenceGroup(groupName) {
+  return document.querySelector(
+    `.preference-options[data-group="${groupName}"]`
+  );
+}
+
+function clearPreferenceError(groupName) {
+  const error = document.querySelector(
+    `[data-error="${groupName}"]`
+  );
+
+  if (error) {
+    error.textContent = '';
+  }
+}
+
+function showPreferenceError(groupName, message) {
+  const error = document.querySelector(
+    `[data-error="${groupName}"]`
+  );
+
+  if (!error) return;
+
+  error.textContent = message;
+
+  window.clearTimeout(error._timer);
+
+  error._timer = window.setTimeout(() => {
+    error.textContent = '';
+  }, 3500);
+}
+
+function initialisePreferenceGroup(groupName) {
+  const group = getPreferenceGroup(groupName);
+
+  if (!group) return;
+
+  const allCheckbox = group.querySelector('[data-all]');
+  const specificCheckboxes = [
+    ...group.querySelectorAll(
+      'input[type="checkbox"]:not([data-all])'
+    )
+  ];
+
+  // Default = All
+  allCheckbox.checked = true;
+
+  allCheckbox.addEventListener('change', () => {
+    clearPreferenceError(groupName);
+
+    if (allCheckbox.checked) {
+      specificCheckboxes.forEach(checkbox => {
+        checkbox.checked = false;
+      });
+    } else {
+      // Prevent an empty category.
+      const hasSpecificSelection =
+        specificCheckboxes.some(checkbox => checkbox.checked);
+
+      if (!hasSpecificSelection) {
+        allCheckbox.checked = true;
+      }
+    }
+  });
+
+  specificCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+      clearPreferenceError(groupName);
+
+      if (checkbox.checked) {
+        const selected = specificCheckboxes.filter(
+          option => option.checked
+        );
+
+        if (selected.length > 2) {
+          checkbox.checked = false;
+
+          const labels = {
+            colour: 'colours',
+            shape: 'shapes',
+            function: 'functions'
+          };
+
+          showPreferenceError(
+            groupName,
+            `You can select up to 2 ${labels[groupName]}. Please deselect one before choosing another.`
+          );
+
+          return;
+        }
+
+        allCheckbox.checked = false;
+      }
+
+      const remaining = specificCheckboxes.filter(
+        option => option.checked
+      );
+
+      // If the user deselects every specific option,
+      // return the category to All.
+      if (remaining.length === 0) {
+        allCheckbox.checked = true;
+      }
+    });
+  });
+}
+
+function resetPreferences() {
+  ['colour', 'shape', 'function'].forEach(groupName => {
+    const group = getPreferenceGroup(groupName);
+
+    if (!group) return;
+
+    const allCheckbox = group.querySelector('[data-all]');
+
+    group.querySelectorAll(
+      'input[type="checkbox"]'
+    ).forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    allCheckbox.checked = true;
+
+    clearPreferenceError(groupName);
+  });
+
+  userPreferences = {
+    colour: [],
+    shape: [],
+    function: []
+  };
+}
+
+function readPreferenceGroup(groupName) {
+  const group = getPreferenceGroup(groupName);
+
+  if (!group) return [];
+
+  const allCheckbox = group.querySelector('[data-all]');
+
+  if (allCheckbox.checked) {
+    return [];
+  }
+
+  return [
+    ...group.querySelectorAll(
+      'input[type="checkbox"]:not([data-all]):checked'
+    )
+  ].map(checkbox => checkbox.value);
+}
+
+['colour', 'shape', 'function'].forEach(
+  initialisePreferenceGroup
+);
+
+applyPreferencesButton.addEventListener('click', () => {
+  userPreferences = {
+    colour: readPreferenceGroup('colour'),
+    shape: readPreferenceGroup('shape'),
+    function: readPreferenceGroup('function')
+  };
+
+  console.info(
+    'RumAI user preferences',
+    userPreferences
+  );
+
+  preferenceStatus.textContent =
+    'Preferences saved. Recommendation v2 scoring will use these selections in the next implementation stage.';
+
+  // For Step 2, keep the existing Recommendation v1 unchanged.
+  showCollection();
+
+  document.querySelector('#recommendations').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+});
+confirmButton.addEventListener('click', () => {
+  const selectedStyle =
+    document.querySelector('input[name="style"]:checked');
+
+  if (!selectedStyle) return;
+
+  const style = selectedStyle.value;
+
+  confirmedStyle = style;
+
+  resetPreferences();
+
+  preferencesSection.hidden = false;
+
+  document.querySelector('#collection-title').textContent =
+    `A ${style.toLowerCase()} point of view.`;
+
+  document.querySelector('#style-status').textContent =
+    `${style} confirmed. Choose your sofa preferences below.`;
+
+  preferenceStatus.textContent =
+    'Preferences are optional. You can keep All selected.';
+
+  preferencesSection.scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
 });

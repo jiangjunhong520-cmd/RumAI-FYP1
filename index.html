@@ -54,6 +54,162 @@
       </div>
     </section>
     <section id="recommendations" class="recommendations"><div class="section-heading"><div><p class="eyebrow">A place to settle in</p><h2 id="collection-title">A few pieces to imagine.</h2><p id="collection-note">A sample collection. Confirm your style to personalise this preview.</p></div><span class="badge">Illustrative furniture · mock data</span></div><div id="sofa-grid" class="sofa-grid"></div></section>
+    <section id="preferences" class="preferences" hidden>
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Your preferences</p>
+      <h2>What matters to you?</h2>
+      <p>Choose up to 2 options in each category, or select All.</p>
+    </div>
+    <span class="badge">Optional preferences</span>
+  </div>
+
+  <div class="preference-grid">
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">03</span>
+        <h3>Preferred Colour</h3>
+      </div>
+
+      <p class="small">Select up to 2 colours.</p>
+
+      <div class="preference-options" data-group="colour">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Colours</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Beige">
+          <span>Beige</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Grey">
+          <span>Grey</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Brown">
+          <span>Brown</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Black">
+          <span>Black</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="White & Cream">
+          <span>White & Cream</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Blue">
+          <span>Blue</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Green">
+          <span>Green</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Terracotta & Orange">
+          <span>Terracotta & Orange</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="colour"></p>
+    </section>
+
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">04</span>
+        <h3>Sofa Shape</h3>
+      </div>
+
+      <p class="small">Select up to 2 shapes.</p>
+
+      <div class="preference-options" data-group="shape">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Shapes</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Straight">
+          <span>Straight Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Chaise">
+          <span>Chaise Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Sectional / Corner">
+          <span>Sectional / Corner Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Curved">
+          <span>Curved Sofa</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="shape"></p>
+    </section>
+
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">05</span>
+        <h3>Sofa Function</h3>
+      </div>
+
+      <p class="small">Select up to 2 functions.</p>
+
+      <div class="preference-options" data-group="function">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Functions</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Standard">
+          <span>Standard Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Manual Recliner">
+          <span>Manual Recliner</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Power Recliner">
+          <span>Power Recliner</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="function"></p>
+    </section>
+
+  </div>
+
+  <button
+    type="button"
+    id="apply-preferences"
+    class="button dark preference-confirm">
+    Apply Preferences →
+  </button>
+
+  <p id="preference-status" class="status" role="status">
+    Preferences are optional. You can keep All selected.
+  </p>
+</section>
     <p id="catalogue-status" class="small" role="status">Loading sample catalogue…</p>
     <label id="catalogue-file-label" class="small" hidden>Load the supplied catalogue.json <input id="catalogue-file" type="file" accept=".json,application/json"></label>
     <details><summary>Upload performance timings</summary><p class="small">Milliseconds; setup timings are one-time costs, not added anew on every upload. Copy these results when reporting mobile latency.</p><pre id="performance-log" style="white-space:pre-wrap">Upload an image to collect timings.</pre></details>
