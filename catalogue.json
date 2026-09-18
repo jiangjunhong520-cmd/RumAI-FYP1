@@ -33,7 +33,27 @@
     "depth": 92,
     "material": "Leather with steel frame",
     "form": "Track-arm three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Cognac",
+        "colourFamily": "Brown",
+        "rgb": [
+          154,
+          89,
+          52
+        ],
+        "hsv": [
+          21.76,
+          66.23,
+          60.39
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-1.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-2",
@@ -69,7 +89,27 @@
     "depth": 88,
     "material": "Woven canvas with steel legs",
     "form": "Compact two-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Charcoal",
+        "colourFamily": "Grey",
+        "rgb": [
+          61,
+          62,
+          60
+        ],
+        "hsv": [
+          90,
+          3.23,
+          24.31
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-2.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-3",
@@ -105,7 +145,27 @@
     "depth": 96,
     "material": "Distressed leather",
     "form": "Deep-seat three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Tobacco",
+        "colourFamily": "Brown",
+        "rgb": [
+          116,
+          80,
+          55
+        ],
+        "hsv": [
+          24.59,
+          52.59,
+          45.49
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-3.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-4",
@@ -141,7 +201,27 @@
     "depth": 100,
     "material": "Textured weave with metal legs",
     "form": "Compact sectional with a shallow right-hand return",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Slate",
+        "colourFamily": "Grey",
+        "rgb": [
+          101,
+          111,
+          115
+        ],
+        "hsv": [
+          197.14,
+          12.17,
+          45.1
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-4.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-5",
@@ -177,7 +257,27 @@
     "depth": 90,
     "material": "Cotton canvas with steel base",
     "form": "Bench-seat sofa",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Olive",
+        "colourFamily": "Green",
+        "rgb": [
+          105,
+          108,
+          74
+        ],
+        "hsv": [
+          65.29,
+          31.48,
+          42.35
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-5.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-1",
@@ -213,7 +313,27 @@
     "depth": 92,
     "material": "Linen blend",
     "form": "Armless three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Ivory",
+        "colourFamily": "White & Cream",
+        "rgb": [
+          232,
+          225,
+          209
+        ],
+        "hsv": [
+          41.74,
+          9.91,
+          90.98
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-1.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-2",
@@ -249,7 +369,27 @@
     "depth": 88,
     "material": "Tight-woven fabric",
     "form": "Slim-arm two-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Stone",
+        "colourFamily": "Grey",
+        "rgb": [
+          184,
+          181,
+          169
+        ],
+        "hsv": [
+          48,
+          8.15,
+          72.16
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-2.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-3",
@@ -285,7 +425,27 @@
     "depth": 96,
     "material": "Wool blend",
     "form": "Low-back three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Warm grey",
+        "colourFamily": "Grey",
+        "rgb": [
+          164,
+          159,
+          150
+        ],
+        "hsv": [
+          38.57,
+          8.54,
+          64.31
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-3.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-4",
@@ -321,7 +481,27 @@
     "depth": 100,
     "material": "Cotton twill",
     "form": "Modular sofa with a shallow right-hand lounging section",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Sand",
+        "colourFamily": "Beige",
+        "rgb": [
+          207,
+          190,
+          161
+        ],
+        "hsv": [
+          37.83,
+          22.22,
+          81.18
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-4.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-5",
@@ -356,8 +536,28 @@
     "height": 84,
     "depth": 90,
     "material": "Boucle",
-    "form": "Rounded compact sofa",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "form": "Compact curved sofa with a continuous crescent-shaped seating profile",
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Curved",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Cream",
+        "colourFamily": "White & Cream",
+        "rgb": [
+          239,
+          232,
+          214
+        ],
+        "hsv": [
+          43.2,
+          10.46,
+          93.73
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-5.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-1",
@@ -393,7 +593,27 @@
     "depth": 92,
     "material": "Velvet",
     "form": "Curved three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Curved",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Terracotta",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          178,
+          102,
+          79
+        ],
+        "hsv": [
+          13.94,
+          55.62,
+          69.8
+        ],
+        "image": "assets/sofas/modern/sofa-mod-1.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-2",
@@ -429,7 +649,27 @@
     "depth": 88,
     "material": "Performance weave",
     "form": "Angular two-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Navy",
+        "colourFamily": "Blue",
+        "rgb": [
+          45,
+          63,
+          83
+        ],
+        "hsv": [
+          211.58,
+          45.78,
+          32.55
+        ],
+        "image": "assets/sofas/modern/sofa-mod-2.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-3",
@@ -465,7 +705,27 @@
     "depth": 96,
     "material": "Leather",
     "form": "Track-arm three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Graphite",
+        "colourFamily": "Grey",
+        "rgb": [
+          78,
+          79,
+          82
+        ],
+        "hsv": [
+          225,
+          4.88,
+          32.16
+        ],
+        "image": "assets/sofas/modern/sofa-mod-3.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-4",
@@ -501,7 +761,27 @@
     "depth": 100,
     "material": "Boucle",
     "form": "Asymmetric sofa with a shallow right-hand lounging section",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Taupe",
+        "colourFamily": "Beige",
+        "rgb": [
+          157,
+          140,
+          123
+        ],
+        "hsv": [
+          30,
+          21.66,
+          61.57
+        ],
+        "image": "assets/sofas/modern/sofa-mod-4.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-5",
@@ -537,7 +817,27 @@
     "depth": 90,
     "material": "Wool blend",
     "form": "Sculpted two-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Forest",
+        "colourFamily": "Green",
+        "rgb": [
+          63,
+          88,
+          70
+        ],
+        "hsv": [
+          136.8,
+          28.41,
+          34.51
+        ],
+        "image": "assets/sofas/modern/sofa-mod-5.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-1",
@@ -573,7 +873,27 @@
     "depth": 92,
     "material": "Linen blend with oak legs",
     "form": "Open-leg three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Oatmeal",
+        "colourFamily": "Beige",
+        "rgb": [
+          215,
+          204,
+          182
+        ],
+        "hsv": [
+          40,
+          15.35,
+          84.31
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-1.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-2",
@@ -609,7 +929,27 @@
     "depth": 88,
     "material": "Wool upholstery with birch legs in an oak-toned finish matching the secondary RGB",
     "form": "Compact two-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Sage",
+        "colourFamily": "Green",
+        "rgb": [
+          158,
+          171,
+          143
+        ],
+        "hsv": [
+          87.86,
+          16.37,
+          67.06
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-2.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-3",
@@ -645,7 +985,27 @@
     "depth": 96,
     "material": "Cotton weave upholstery with ash legs in an oak-toned finish matching the secondary RGB",
     "form": "Button-back three-seater",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Light grey",
+        "colourFamily": "Grey",
+        "rgb": [
+          201,
+          202,
+          198
+        ],
+        "hsv": [
+          75,
+          1.98,
+          79.22
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-3.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-4",
@@ -681,7 +1041,27 @@
     "depth": 100,
     "material": "Wool blend",
     "form": "Reversible shallow lounging section, shown on the right",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Dusty blue",
+        "colourFamily": "Blue",
+        "rgb": [
+          139,
+          162,
+          173
+        ],
+        "hsv": [
+          199.41,
+          19.65,
+          67.84
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-4.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-5",
@@ -717,7 +1097,27 @@
     "depth": 90,
     "material": "Boucle with oak legs",
     "form": "Straight two-seater with softly rounded outer corners; no corner return",
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Warm white",
+        "colourFamily": "White & Cream",
+        "rgb": [
+          235,
+          230,
+          216
+        ],
+        "hsv": [
+          44.21,
+          8.09,
+          92.16
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-5.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-6",
@@ -753,7 +1153,27 @@
     "depth": 85,
     "image": "assets/sofas/industrial/sofa-ind-6.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Rust",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          143,
+          66,
+          42
+        ],
+        "hsv": [
+          14.26,
+          70.63,
+          56.08
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-6.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-7",
@@ -789,7 +1209,27 @@
     "depth": 88,
     "image": "assets/sofas/industrial/sofa-ind-7.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Ink blue",
+        "colourFamily": "Blue",
+        "rgb": [
+          39,
+          58,
+          74
+        ],
+        "hsv": [
+          207.43,
+          47.3,
+          29.02
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-7.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-8",
@@ -825,7 +1265,27 @@
     "depth": 170,
     "image": "assets/sofas/industrial/sofa-ind-8.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Brick",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          132,
+          54,
+          50
+        ],
+        "hsv": [
+          2.93,
+          62.12,
+          51.76
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-8.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-9",
@@ -861,7 +1321,27 @@
     "depth": 105,
     "image": "assets/sofas/industrial/sofa-ind-9.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Khaki",
+        "colourFamily": "Beige",
+        "rgb": [
+          146,
+          135,
+          87
+        ],
+        "hsv": [
+          48.81,
+          40.41,
+          57.25
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-9.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-10",
@@ -897,7 +1377,27 @@
     "depth": 91,
     "image": "assets/sofas/industrial/sofa-ind-10.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Concrete",
+        "colourFamily": "Grey",
+        "rgb": [
+          150,
+          153,
+          149
+        ],
+        "hsv": [
+          105,
+          2.61,
+          60
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-10.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-11",
@@ -933,7 +1433,27 @@
     "depth": 112,
     "image": "assets/sofas/industrial/sofa-ind-11.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Espresso",
+        "colourFamily": "Brown",
+        "rgb": [
+          64,
+          43,
+          34
+        ],
+        "hsv": [
+          18,
+          46.88,
+          25.1
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-11.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-IND-12",
@@ -969,7 +1489,27 @@
     "depth": 155,
     "image": "assets/sofas/industrial/sofa-ind-12.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Steel teal",
+        "colourFamily": "Blue",
+        "rgb": [
+          65,
+          100,
+          101
+        ],
+        "hsv": [
+          181.67,
+          35.64,
+          39.61
+        ],
+        "image": "assets/sofas/industrial/sofa-ind-12.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-6",
@@ -1005,7 +1545,27 @@
     "depth": 98,
     "image": "assets/sofas/minimalist/sofa-min-6.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Soft charcoal",
+        "colourFamily": "Grey",
+        "rgb": [
+          67,
+          70,
+          72
+        ],
+        "hsv": [
+          204,
+          6.94,
+          28.24
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-6.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-7",
@@ -1041,7 +1601,27 @@
     "depth": 84,
     "image": "assets/sofas/minimalist/sofa-min-7.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Muted sage",
+        "colourFamily": "Green",
+        "rgb": [
+          171,
+          183,
+          163
+        ],
+        "hsv": [
+          96,
+          10.93,
+          71.76
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-7.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-8",
@@ -1077,7 +1657,27 @@
     "depth": 89,
     "image": "assets/sofas/minimalist/sofa-min-8.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Dusty blue",
+        "colourFamily": "Blue",
+        "rgb": [
+          149,
+          164,
+          178
+        ],
+        "hsv": [
+          208.97,
+          16.29,
+          69.8
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-8.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-9",
@@ -1113,7 +1713,27 @@
     "depth": 160,
     "image": "assets/sofas/minimalist/sofa-min-9.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Clay beige",
+        "colourFamily": "Beige",
+        "rgb": [
+          190,
+          156,
+          135
+        ],
+        "hsv": [
+          22.91,
+          28.95,
+          74.51
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-9.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-10",
@@ -1149,7 +1769,27 @@
     "depth": 82,
     "image": "assets/sofas/minimalist/sofa-min-10.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Mushroom",
+        "colourFamily": "Beige",
+        "rgb": [
+          139,
+          126,
+          122
+        ],
+        "hsv": [
+          14.12,
+          12.23,
+          54.51
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-10.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-11",
@@ -1185,7 +1825,27 @@
     "depth": 94,
     "image": "assets/sofas/minimalist/sofa-min-11.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Off-black",
+        "colourFamily": "Black",
+        "rgb": [
+          40,
+          40,
+          39
+        ],
+        "hsv": [
+          60,
+          2.5,
+          15.69
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-11.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MIN-12",
@@ -1221,7 +1881,27 @@
     "depth": 148,
     "image": "assets/sofas/minimalist/sofa-min-12.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Pale lavender grey",
+        "colourFamily": "Grey",
+        "rgb": [
+          178,
+          171,
+          185
+        ],
+        "hsv": [
+          270,
+          7.57,
+          72.55
+        ],
+        "image": "assets/sofas/minimalist/sofa-min-12.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-6",
@@ -1257,7 +1937,27 @@
     "depth": 100,
     "image": "assets/sofas/modern/sofa-mod-6.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Curved",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Ochre",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          191,
+          142,
+          43
+        ],
+        "hsv": [
+          40.14,
+          77.49,
+          74.9
+        ],
+        "image": "assets/sofas/modern/sofa-mod-6.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-7",
@@ -1293,7 +1993,27 @@
     "depth": 180,
     "image": "assets/sofas/modern/sofa-mod-7.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Power Recliner",
+    "recliningSeatCount": 2,
+    "colourOptions": [
+      {
+        "productColourName": "Petrol",
+        "colourFamily": "Blue",
+        "rgb": [
+          28,
+          107,
+          115
+        ],
+        "hsv": [
+          185.52,
+          75.65,
+          45.1
+        ],
+        "image": "assets/sofas/modern/sofa-mod-7.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-8",
@@ -1329,7 +2049,27 @@
     "depth": 115,
     "image": "assets/sofas/modern/sofa-mod-8.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Curved",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Plum",
+        "colourFamily": "Other",
+        "rgb": [
+          103,
+          57,
+          96
+        ],
+        "hsv": [
+          309.13,
+          44.66,
+          40.39
+        ],
+        "image": "assets/sofas/modern/sofa-mod-8.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-9",
@@ -1365,7 +2105,27 @@
     "depth": 92,
     "image": "assets/sofas/modern/sofa-mod-9.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Pearl",
+        "colourFamily": "White & Cream",
+        "rgb": [
+          222,
+          219,
+          207
+        ],
+        "hsv": [
+          48,
+          6.76,
+          87.06
+        ],
+        "image": "assets/sofas/modern/sofa-mod-9.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-10",
@@ -1373,7 +2133,7 @@
     "category": "Sofa",
     "style": "Modern",
     "material": "Textured performance weave",
-    "form": "Connected asymmetric arrangement with deeper seating module on the right",
+    "form": "Asymmetric modular sectional with a deeper right-hand module",
     "primaryColour": "Coral",
     "secondaryColour": "Dark wood",
     "primaryRGB": [
@@ -1401,7 +2161,27 @@
     "depth": 145,
     "image": "assets/sofas/modern/sofa-mod-10.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Coral",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          207,
+          116,
+          105
+        ],
+        "hsv": [
+          6.47,
+          49.28,
+          81.18
+        ],
+        "image": "assets/sofas/modern/sofa-mod-10.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-11",
@@ -1437,7 +2217,27 @@
     "depth": 88,
     "image": "assets/sofas/modern/sofa-mod-11.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Cobalt",
+        "colourFamily": "Blue",
+        "rgb": [
+          52,
+          77,
+          149
+        ],
+        "hsv": [
+          224.54,
+          65.1,
+          58.43
+        ],
+        "image": "assets/sofas/modern/sofa-mod-11.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-MOD-12",
@@ -1473,7 +2273,27 @@
     "depth": 165,
     "image": "assets/sofas/modern/sofa-mod-12.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Warm caramel",
+        "colourFamily": "Brown",
+        "rgb": [
+          180,
+          119,
+          69
+        ],
+        "hsv": [
+          27.03,
+          61.67,
+          70.59
+        ],
+        "image": "assets/sofas/modern/sofa-mod-12.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-6",
@@ -1509,7 +2329,27 @@
     "depth": 84,
     "image": "assets/sofas/scandinavian/sofa-sca-6.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Muted mustard",
+        "colourFamily": "Beige",
+        "rgb": [
+          187,
+          164,
+          87
+        ],
+        "hsv": [
+          46.2,
+          53.48,
+          73.33
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-6.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-7",
@@ -1545,7 +2385,27 @@
     "depth": 92,
     "image": "assets/sofas/scandinavian/sofa-sca-7.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Sea green",
+        "colourFamily": "Green",
+        "rgb": [
+          102,
+          148,
+          137
+        ],
+        "hsv": [
+          165.65,
+          31.08,
+          58.04
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-7.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-8",
@@ -1553,7 +2413,7 @@
     "category": "Sofa",
     "style": "Scandinavian",
     "material": "Cotton upholstery with exposed ash legs in an oak-toned finish matching the secondary RGB",
-    "form": "Rounded-arm two-seater",
+    "form": "Soft curved two-seater with a continuous crescent-shaped seating profile",
     "primaryColour": "Dusty terracotta",
     "secondaryColour": "Natural oak",
     "primaryRGB": [
@@ -1581,7 +2441,27 @@
     "depth": 94,
     "image": "assets/sofas/scandinavian/sofa-sca-8.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Curved",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Dusty terracotta",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          179,
+          125,
+          103
+        ],
+        "hsv": [
+          17.37,
+          42.46,
+          70.2
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-8.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-9",
@@ -1617,7 +2497,27 @@
     "depth": 86,
     "image": "assets/sofas/scandinavian/sofa-sca-9.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Warm graphite",
+        "colourFamily": "Grey",
+        "rgb": [
+          92,
+          94,
+          90
+        ],
+        "hsv": [
+          90,
+          4.26,
+          36.86
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-9.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-10",
@@ -1653,7 +2553,27 @@
     "depth": 150,
     "image": "assets/sofas/scandinavian/sofa-sca-10.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Chaise",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Blush",
+        "colourFamily": "Terracotta & Orange",
+        "rgb": [
+          203,
+          170,
+          164
+        ],
+        "hsv": [
+          9.23,
+          19.21,
+          79.61
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-10.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-11",
@@ -1689,7 +2609,27 @@
     "depth": 95,
     "image": "assets/sofas/scandinavian/sofa-sca-11.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Straight",
+    "function": "Manual Recliner",
+    "recliningSeatCount": 1,
+    "colourOptions": [
+      {
+        "productColourName": "Muted navy",
+        "colourFamily": "Blue",
+        "rgb": [
+          69,
+          88,
+          112
+        ],
+        "hsv": [
+          213.49,
+          38.39,
+          43.92
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-11.svg"
+      }
+    ]
   },
   {
     "itemId": "SOFA-SCA-12",
@@ -1725,6 +2665,26 @@
     "depth": 168,
     "image": "assets/sofas/scandinavian/sofa-sca-12.svg",
     "gltfURL": null,
-    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph"
+    "imageStatus": "Item-specific prototype SVG illustration; not a real product photograph",
+    "shape": "Sectional / Corner",
+    "function": "Standard",
+    "recliningSeatCount": 0,
+    "colourOptions": [
+      {
+        "productColourName": "Flax",
+        "colourFamily": "Beige",
+        "rgb": [
+          194,
+          179,
+          143
+        ],
+        "hsv": [
+          42.35,
+          26.29,
+          76.08
+        ],
+        "image": "assets/sofas/scandinavian/sofa-sca-12.svg"
+      }
+    ]
   }
 ]

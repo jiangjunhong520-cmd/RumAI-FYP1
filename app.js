@@ -157,10 +157,34 @@ document.querySelectorAll('input[name="style"]').forEach(radio => {
 
 // Score every catalogue item before selecting the Top 5.
 function showCollection() {
-  const items = Recommendations.rank(catalogue, confirmedStyle, roomPalette).slice(0, 5);
-  document.querySelector('#collection-note').textContent = items.length ? 'Top 5 from all sample sofas. Equal weight for style and room colour similarity.' : 'Upload a room photo, load the catalogue and confirm a style to see recommendations.';
+ const items = Recommendations.rank(
+  catalogue,
+  confirmedStyle,
+  roomPalette,
+  userPreferences
+).slice(0, 5);
+  const hasPreferences =
+  userPreferences.colour.length > 0 ||
+  userPreferences.shape.length > 0 ||
+  userPreferences.function.length > 0;
+
+document.querySelector('#collection-note').textContent =
+  items.length
+    ? (
+        hasPreferences
+          ? 'Top 5 from all prototype sofas, ranked using your selected preferences and room compatibility.'
+          : 'Top 5 from all prototype sofas, ranked using room compatibility.'
+      )
+    : 'Upload a room photo, confirm a style and apply your preferences to see recommendations.';
   document.querySelector('#sofa-grid').replaceChildren();
-  items.forEach(({ item, styleMatch, colourMatch, finalScore }) => {
+  items.forEach(({
+  item,
+  bestColourOption,
+  roomCompatibility,
+  userPreferenceScore,
+  exactPreferenceMatch,
+  finalScore
+}) => {
     const name = item.name;
     const card = document.createElement('article');
     card.className = 'sofa-card';
@@ -190,12 +214,41 @@ function showCollection() {
     }
     card.querySelector('.eyebrow').textContent = `${item.style} collection · sample`;
     card.querySelector('h3').textContent = name;
-    card.querySelector('.details').textContent = `${item.primaryColour} / ${item.secondaryColour} · W ${item.width} × H ${item.height} × D ${item.depth} cm`;
+    const recommendedColour =
+  bestColourOption?.productColourName ||
+  item.primaryColour;
+
+card.querySelector('.details').textContent =
+  `${recommendedColour} · ${item.shape} · ${item.function} · W ${item.width} × H ${item.height} × D ${item.depth} cm`;
     const scores = document.createElement('p');
-    scores.textContent = `Style Match: ${styleMatch.toFixed(3)} · Colour Match: ${colourMatch.toFixed(3)} · Final Score: ${finalScore.toFixed(3)}`;
-    const explanation = document.createElement('p');
-    explanation.textContent = `${styleMatch ? 'Matches' : 'Does not match'} your confirmed ${confirmedStyle} style. Its two catalogue colours have ${(colourMatch * 100).toFixed(1)}% weighted HSV similarity to your room palette.`;
-    card.querySelector('.card-actions').before(scores, explanation);
+
+if (hasPreferences) {
+  scores.textContent =
+    `Preference Match: ${(userPreferenceScore * 100).toFixed(1)}% · ` +
+    `Room Compatibility: ${(roomCompatibility * 100).toFixed(1)}% · ` +
+    `Overall Match: ${(finalScore * 100).toFixed(1)}%`;
+} else {
+  scores.textContent =
+    `Room Compatibility: ${(roomCompatibility * 100).toFixed(1)}% · ` +
+    `Overall Match: ${(finalScore * 100).toFixed(1)}%`;
+}
+
+const explanation = document.createElement('p');
+
+if (hasPreferences) {
+  explanation.textContent =
+    exactPreferenceMatch
+      ? 'Matches all of your active sofa preferences.'
+      : 'No exact match is available for all active preferences. This is one of the closest alternatives.';
+} else {
+  explanation.textContent =
+    'No specific sofa preferences were selected, so this result is ranked using the confirmed room style and room colour compatibility.';
+}
+
+card.querySelector('.card-actions').before(
+  scores,
+  explanation
+);
     card.querySelectorAll('[data-feature]').forEach(button => button.addEventListener('click', () => {
       const feature = button.dataset.feature;
       if (feature === 'AR') {
@@ -409,8 +462,7 @@ applyPreferencesButton.addEventListener('click', () => {
   );
 
   preferenceStatus.textContent =
-    'Preferences saved. Recommendation v2 scoring will use these selections in the next implementation stage.';
-
+     'Preferences applied. The Top 5 recommendations have been updated.';
   // For Step 2, keep the existing Recommendation v1 unchanged.
   showCollection();
 
