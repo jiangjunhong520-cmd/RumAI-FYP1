@@ -181,7 +181,9 @@ document.querySelector('#collection-note').textContent =
   item,
   bestColourOption,
   roomCompatibility,
-  userPreferenceScore,
+  preferredColourMatch,
+  shapeMatch,
+  functionMatch,
   exactPreferenceMatch,
   finalScore
 }) => {
@@ -221,17 +223,27 @@ document.querySelector('#collection-note').textContent =
 card.querySelector('.details').textContent =
   `${recommendedColour} · ${item.shape} · ${item.function} · W ${item.width} × H ${item.height} × D ${item.depth} cm`;
     const scores = document.createElement('p');
-
-if (hasPreferences) {
-  scores.textContent =
-    `Preference Match: ${(userPreferenceScore * 100).toFixed(1)}% · ` +
-    `Room Compatibility: ${(roomCompatibility * 100).toFixed(1)}% · ` +
-    `Overall Match: ${(finalScore * 100).toFixed(1)}%`;
-} else {
-  scores.textContent =
-    `Room Compatibility: ${(roomCompatibility * 100).toFixed(1)}% · ` +
-    `Overall Match: ${(finalScore * 100).toFixed(1)}%`;
-}
+    const scoreRows = [];
+    if (hasPreferences) {
+      [
+        ['Colour', userPreferences.colour, preferredColourMatch],
+        ['Shape', userPreferences.shape, shapeMatch],
+        ['Function', userPreferences.function, functionMatch]
+      ].forEach(([label, selected, match]) => {
+        const status = selected.length === 0
+          ? 'Not selected'
+          : match === 1 ? 'Matched' : 'Not matched';
+        scoreRows.push(`${label} Match: ${status}`);
+      });
+    }
+    scoreRows.push(
+      `Room Compatibility: ${(roomCompatibility * 100).toFixed(1)}%`,
+      `Overall Match: ${(finalScore * 100).toFixed(1)}%`
+    );
+    scoreRows.forEach((text, index) => {
+      if (index > 0) scores.append(document.createElement('br'));
+      scores.append(document.createTextNode(text));
+    });
 
 const explanation = document.createElement('p');
 
@@ -242,7 +254,7 @@ if (hasPreferences) {
       : 'No exact match is available for all active preferences. This is one of the closest alternatives.';
 } else {
   explanation.textContent =
-    'No specific sofa preferences were selected, so this result is ranked using the confirmed room style and room colour compatibility.';
+    'No specific sofa preferences were selected, so this result is ranked using room compatibility.';
 }
 
 card.querySelector('.card-actions').before(
