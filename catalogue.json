@@ -307,7 +307,9 @@
       72.16
     ],
     "image": "assets/sofas/minimalist/sofa-min-1.svg",
-    "gltfURL": null,
+    "gltfURL": "assets/sofas/minimalist/sofa-min-1.glb",
+    "modelScalePolicy": "native-prototype",
+    "dimensionsStatus": "Prototype targets 210 x 82 x 92 cm; model uniformly scaled to 210 cm width only; real product dimensions unavailable/unverified; no furniture-fit guarantee",
     "width": 210,
     "height": 82,
     "depth": 92,
@@ -867,7 +869,7 @@
       72.16
     ],
     "image": "assets/sofas/scandinavian/sofa-sca-1.svg",
-    "gltfURL": null,
+    "gltfURL": "assets/sofas/scandinavian/sofa-sca-1.glb",
     "width": 210,
     "height": 82,
     "depth": 92,
@@ -893,7 +895,10 @@
         ],
         "image": "assets/sofas/scandinavian/sofa-sca-1.svg"
       }
-    ]
+    ],
+    "dimensionsStatus": "Prototype targets 210 x 82 x 92 cm; model uniformly scaled to 210 cm width only; real product dimensions unavailable/unverified; no furniture-fit guarantee",
+    "usdzURL": "assets/sofas/scandinavian/sofa-sca-1.usdz",
+    "modelScalePolicy": "native-prototype"
   },
   {
     "itemId": "SOFA-SCA-2",
