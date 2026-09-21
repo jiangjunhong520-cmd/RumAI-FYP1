@@ -19,20 +19,20 @@ export async function openQuickLook(item) {
     try { const viewer = await import('./viewer.js'); await viewer.openViewer(item); }
     catch { dialog.showModal(); status.textContent = 'The 3D viewer could not load. Check your connection and open the HTTPS test URL in Safari.'; }
   };
-  status.textContent = 'Checking the shared sofa AR asset…';
+  status.textContent = item.usdzURL ? 'Checking this sofa’s AR asset…' : 'Checking the shared sofa AR asset…';
   try {
     if (!link.relList.supports?.('ar')) {
       status.textContent = 'This browser does not report AR Quick Look support. Try Safari or View in 3D.';
       return;
     }
-    const url = 'assets/sample-sofa.usdz';
+    const url = item.usdzURL || 'assets/sample-sofa.usdz';
     const response = await fetch(url, {method:'HEAD', cache:'no-store'});
     if (dialog.dataset.request !== token) return;
     if (!response.ok) throw new Error('USDZ missing');
     if (!response.headers.get('content-type')?.includes('model/vnd.usdz+zip')) throw new Error('USDZ content type incorrect');
     link.href = url;
     link.hidden = false;
-    status.textContent = 'Shared prototype asset available. Tap Start AR to open Apple Quick Look. If it cannot open, return here and use View in 3D. Availability is not proof of valid USDZ content or physical scale.';
+    status.textContent = (item.usdzURL ? 'Product-specific asset available; physical scale remains unverified. ' : 'Shared prototype asset available. ') + 'Tap Start AR to open Apple Quick Look. If it cannot open, return here and use View in 3D. Availability is not proof of valid USDZ content or physical scale.';
   } catch {
     if (dialog.dataset.request === token) status.textContent = 'The sofa USDZ asset is missing or unavailable. iPhone AR is not ready yet. Use View in 3D instead.';
   }

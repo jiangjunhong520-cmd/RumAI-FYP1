@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Forma — RumAI 3D & AR Demo</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three/build/three.module.js"
+    }
+  }
+  </script>
+
+  <style>
+    .forma-demo {
+      max-width: 760px;
+      margin: 48px auto;
+      padding: 24px;
+    }
+
+    .demo-heading {
+      margin-bottom: 28px;
+    }
+
+    .demo-heading h1 {
+      margin-bottom: 8px;
+    }
+
+    .forma-card {
+      max-width: 520px;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      border-radius: 18px;
+      overflow: hidden;
+      background: white;
+    }
+
+    .forma-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #f2f0e8;
+    }
+
+    .forma-card-copy {
+      padding: 24px;
+    }
+
+    .forma-card-copy h2 {
+      margin: 4px 0 10px;
+    }
+
+    .forma-details {
+      color: #666;
+      margin-bottom: 22px;
+    }
+
+    .demo-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .demo-actions button {
+      min-height: 44px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="forma-demo">
+
+    <div class="demo-heading">
+      <p class="eyebrow">RumAI Furniture Visualisation Demo</p>
+      <h1>Forma</h1>
+      <p>
+        Dedicated prototype entry point for demonstrating
+        interactive 3D viewing and AR visualisation.
+      </p>
+    </div>
+
+    <article class="forma-card">
+
+      <img
+        src="assets/sofas/minimalist/sofa-min-1-render.png"
+        alt="Forma minimalist sofa">
+
+      <div class="forma-card-copy">
+
+        <p class="eyebrow">Minimalist Collection</p>
+
+        <h2>Forma Sofa</h2>
+
+        <p class="forma-details">
+          Ivory · Straight · Standard<br>
+          Prototype catalogue dimensions:
+          W 210 × H 82 × D 92 cm
+        </p>
+
+        <div class="demo-actions">
+
+          <button
+            type="button"
+            id="forma-view-3d"
+            class="button dark">
+            View in 3D
+          </button>
+
+          <button
+            type="button"
+            id="forma-view-ar"
+            class="button">
+            View in AR
+          </button>
+
+        </div>
+
+        <p id="demo-status" class="small" role="status"></p>
+
+      </div>
+
+    </article>
+
+  </main>
+
+
+  <!-- 3D Viewer -->
+  <dialog id="sofa-viewer" aria-labelledby="viewer-title">
+
+    <button
+      id="viewer-close"
+      class="close"
+      aria-label="Close 3D viewer">×</button>
+
+    <p class="eyebrow">Explore the form</p>
+
+    <h2 id="viewer-title">Forma in 3D</h2>
+
+    <p id="viewer-source" class="small"></p>
+
+    <div id="viewer-canvas"></div>
+
+    <p id="viewer-status" role="status">
+      Loading viewer…
+    </p>
+
+    <button
+      id="viewer-reset"
+      class="button dark"
+      disabled>
+      Reset view
+    </button>
+
+    <p id="viewer-dimensions" class="small"></p>
+
+  </dialog>
+
+
+  <!-- Apple Quick Look -->
+  <dialog id="quick-look-dialog" aria-labelledby="quick-look-title">
+
+    <button
+      id="quick-look-close"
+      class="close"
+      aria-label="Close AR options">×</button>
+
+    <p class="eyebrow">Place in your space</p>
+
+    <h2 id="quick-look-title">Forma in AR</h2>
+
+    <p class="small">
+      Product-specific Forma prototype USDZ.
+      Physical scale remains prototype-level and should not be treated as verified furniture-fit evidence.
+    </p>
+
+    <p id="quick-look-status" role="status"></p>
+
+    <a
+      id="quick-look-start"
+      rel="ar"
+      class="button dark"
+      aria-label="Start Forma AR"
+      hidden>
+
+      <img
+        src="assets/sofas/minimalist/sofa-min-1-render.png"
+        alt="Start Forma AR"
+        width="48"
+        height="36">
+
+      Start AR
+
+    </a>
+
+    <button
+      id="quick-look-fallback"
+      class="button">
+      View in 3D instead
+    </button>
+
+  </dialog>
+
+
+  <!-- Android WebXR -->
+  <section id="ar-panel" hidden aria-labelledby="ar-title">
+
+    <div class="ar-sheet">
+
+      <button
+        id="ar-close"
+        class="close"
+        aria-label="Exit AR">×</button>
+
+      <p class="eyebrow">Place in your space</p>
+
+      <h2 id="ar-title">Forma in AR</h2>
+
+      <p id="ar-asset" class="small"></p>
+
+      <p id="ar-status" role="status"></p>
+
+      <button
+        id="ar-start"
+        class="button dark"
+        disabled>
+        Start AR
+      </button>
+
+      <button
+        id="ar-fallback"
+        class="button">
+        View in 3D instead
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <script type="module">
+
+    const forma = {
+      itemId: "SOFA-MIN-1",
+      name: "Forma sofa",
+      style: "Minimalist",
+
+      width: 210,
+      height: 82,
+      depth: 92,
+
+      gltfURL:
+        "assets/sofas/minimalist/sofa-min-1.glb",
+
+      usdzURL:
+        "assets/sofas/minimalist/sofa-min-1.usdz"
+    };
+
+
+    const status =
+      document.querySelector("#demo-status");
+
+
+    document
+      .querySelector("#forma-view-3d")
+      .addEventListener("click", async () => {
+
+        status.textContent =
+          "Opening Forma 3D viewer…";
+
+        try {
+
+          const viewer =
+            await import("./viewer.js");
+
+          await viewer.openViewer(forma);
+
+          status.textContent = "";
+
+        } catch (error) {
+
+          status.textContent =
+            "The 3D viewer could not open.";
+
+        }
+
+      });
+
+
+    document
+      .querySelector("#forma-view-ar")
+      .addEventListener("click", async () => {
+
+        status.textContent =
+          "Checking AR support…";
+
+
+        const appleMobile =
+          /iPhone|iPad|iPod/i.test(navigator.userAgent) ||
+          (
+            /Macintosh|MacIntel/i.test(
+              navigator.userAgent + " " +
+              navigator.platform
+            ) &&
+            navigator.maxTouchPoints > 1
+          );
+
+
+        try {
+
+          if (appleMobile) {
+
+            const quickLook =
+              await import("./quick-look.js");
+
+            await quickLook.openQuickLook(forma);
+
+          } else {
+
+            const ar =
+              await import("./ar.js");
+
+            await ar.openAR(forma);
+
+          }
+
+          status.textContent = "";
+
+        } catch (error) {
+
+          status.textContent =
+            "AR could not open on this device or browser.";
+
+        }
+
+      });
+
+  </script>
+
+</body>
+</html>
