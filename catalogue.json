@@ -308,6 +308,7 @@
     ],
     "image": "assets/sofas/minimalist/sofa-min-1.svg",
     "gltfURL": "assets/sofas/minimalist/sofa-min-1.glb",
+    "usdzURL": "assets/sofas/minimalist/sofa-min-1.usdz",
     "modelScalePolicy": "native-prototype",
     "dimensionsStatus": "Prototype targets 210 x 82 x 92 cm; model uniformly scaled to 210 cm width only; real product dimensions unavailable/unverified; no furniture-fit guarantee",
     "width": 210,
