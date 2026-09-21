@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RumAI — A room that feels like you</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">{"imports":{"three":"./vendor/three/build/three.module.js"}}</script>
+  <script src="colours.js" defer></script>
+  <script src="vendor/tfjs/tf.min.js" defer></script>
+  <script src="inference.js" defer></script>
+  <script src="recommendations.js" defer></script>
+  <script src="recommendation-view-model.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="catalogue.js" defer></script>
+  <script type="module" src="measurement-ui.js"></script>
+  <script type="module" src="auth-ui.js"></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="#">RumAI<span>®</span></a><span class="tagline">Your space. Your style.</span><a href="#studio">Explore your room <span aria-hidden="true">↗</span></a></header>
+  <main>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">A fresh perspective on home</p><h1>A room that<br>feels like you.</h1><p>Find your interior style. Discover a sofa that belongs. Start with a little inspiration from your own space.</p><a class="button dark" href="#studio">Style my room <span aria-hidden="true">↗</span></a><p class="small">Four styles. A world of possibilities.</p></div>
+      <div class="hero-image"><img src="assets/sofa.jpg" alt="Olive sofa with warm neutral cushions in a sunlit living room"><span class="image-note">Thoughtful spaces, everyday living.</span></div>
+    </section>
+    <section id="studio" class="studio">
+      <div class="section-heading"><div><p class="eyebrow">Your room, reimagined</p><h2>Let’s find your direction.</h2></div><span class="badge">Local AI · sample furniture</span></div>
+      <div class="workspace">
+        <section class="panel upload-panel" aria-labelledby="upload-title"><div class="step-heading"><span class="step">01</span><h3 id="upload-title">Start with your space</h3></div>
+          <div class="upload-area" id="upload-area"><div id="upload-prompt"><span class="upload-symbol" aria-hidden="true">＋</span><h4>A new look starts here</h4><p>Choose a clear photo of your living room.</p></div><img id="preview" alt="Your uploaded living room" hidden><label for="file-input" class="button dark upload-control"><span id="upload-button">Upload Room Image</span></label><input
+  type="file"
+  id="file-input"
+  accept="image/*"
+  aria-labelledby="upload-button"
+  aria-describedby="file-note"
+  hidden
+>
+<span id="file-note" hidden></span>
+         
+          <p class="small privacy">Your photo stays in this browser. Nothing is uploaded.</p><p id="upload-status" class="status" role="status"></p>
+          <section id="room-palette" class="room-palette" aria-labelledby="palette-title" hidden>
+            <h3 id="palette-title">Your room palette</h3>
+            <p class="small">Three colour groups from your photo. Approximate shares of visible sampled pixels.</p>
+            <div id="colour-list" class="colour-list"></div>
+            <p id="colour-status" class="status" role="status"></p>
+          </section>
+          </div>
+        </section>
+        <section class="panel style-panel" aria-labelledby="style-title"><div class="step-heading"><span class="step">02</span><h3 id="style-title">Make it your own</h3></div>
+          <div class="ai-result"><div><p class="eyebrow">Suggested Style</p><h4 id="suggested-style">Waiting for your room</h4></div><div class="confidence"><span id="confidence">—</span><small>Confidence</small></div><p id="ai-note">Upload a photo for a MobileNetV3Small style prediction.</p></div>
+          <fieldset><legend>Choose the style that feels right</legend><div class="style-options">
+            <label><input type="radio" name="style" value="Industrial"><span><b>Industrial</b><small>Raw textures. Bold character.</small></span></label>
+            <label><input type="radio" name="style" value="Minimalist"><span><b>Minimalist</b><small>Less, but considered.</small></span></label>
+            <label><input type="radio" name="style" value="Modern"><span><b>Modern</b><small>Clean lines. Refined comfort.</small></span></label>
+            <label><input type="radio" name="style" value="Scandinavian"><span><b>Scandinavian</b><small>Light, warm and natural.</small></span></label>
+          </div></fieldset><button class="button dark confirm" id="confirm" disabled>Confirm Style <span aria-hidden="true">→</span></button><p id="style-status" class="status" role="status">Select a style to explore the sample collection.</p>
+        </section>
+      </div>
+    </section>
+    <section id="preferences" class="preferences" hidden>
+
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Your preferences</p>
+      <h2>What matters to you?</h2>
+      <p>Choose up to 2 options in each category, or select All.</p>
+    </div>
+    <span class="badge">Optional preferences</span>
+  </div>
+
+  <div class="preference-grid">
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">03</span>
+        <h3>Preferred Colour</h3>
+      </div>
+
+      <p class="small">Select up to 2 colours.</p>
+
+      <div class="preference-options" data-group="colour">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Colours</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Beige">
+          <span>Beige</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Grey">
+          <span>Grey</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Brown">
+          <span>Brown</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Black">
+          <span>Black</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="White & Cream">
+          <span>White & Cream</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Blue">
+          <span>Blue</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Green">
+          <span>Green</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Terracotta & Orange">
+          <span>Terracotta & Orange</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="colour"></p>
+    </section>
+
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">04</span>
+        <h3>Sofa Shape</h3>
+      </div>
+
+      <p class="small">Select up to 2 shapes.</p>
+
+      <div class="preference-options" data-group="shape">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Shapes</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Straight">
+          <span>Straight Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Chaise">
+          <span>Chaise Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Sectional / Corner">
+          <span>Sectional / Corner Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Curved">
+          <span>Curved Sofa</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="shape"></p>
+    </section>
+
+
+    <section class="panel preference-panel">
+      <div class="step-heading">
+        <span class="step">05</span>
+        <h3>Sofa Function</h3>
+      </div>
+
+      <p class="small">Select up to 2 functions.</p>
+
+      <div class="preference-options" data-group="function">
+        <label>
+          <input type="checkbox" value="ALL" data-all>
+          <span>All Functions</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Standard">
+          <span>Standard Sofa</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Manual Recliner">
+          <span>Manual Recliner</span>
+        </label>
+
+        <label>
+          <input type="checkbox" value="Power Recliner">
+          <span>Power Recliner</span>
+        </label>
+      </div>
+
+      <p class="preference-error" data-error="function"></p>
+    </section>
+
+  </div>
+
+  <button
+    type="button"
+    id="apply-preferences"
+    class="button dark preference-confirm">
+    Apply Preferences →
+  </button>
+
+  <p id="preference-status" class="status" role="status">
+    Preferences are optional. You can keep All selected.
+  </p>
+</section>
+    <section id="recommendations" class="recommendations"><div class="section-heading"><div><p class="eyebrow">A place to settle in</p><h2 id="collection-title">A few pieces to imagine.</h2><p id="collection-note">A sample collection. Confirm your style to personalise this preview.</p></div><span class="badge">Illustrative furniture · mock data</span></div><div id="sofa-grid" class="sofa-grid"></div></section>
+    <p id="catalogue-status" class="small" role="status">Loading sample catalogue…</p>
+    <label id="catalogue-file-label" class="small" hidden>Load the supplied catalogue.json <input id="catalogue-file" type="file" accept=".json,application/json"></label>
+    <details><summary>Upload performance timings</summary><p class="small">Milliseconds; setup timings are one-time costs, not added anew on every upload. Copy these results when reporting mobile latency.</p><pre id="performance-log" style="white-space:pre-wrap">Upload an image to collect timings.</pre></details>
+  </main>
+  <section class="panel prototype-tools" aria-labelledby="auth-heading">
+    <h2 id="auth-heading">Google Login</h2>
+    <p id="auth-status" role="status">Google Login is not configured yet. You can still use RumAI.</p>
+    <img id="auth-photo" alt="Google account photo" width="48" height="48" referrerpolicy="no-referrer" hidden>
+    <p id="auth-name" hidden></p><p id="auth-email" hidden></p>
+    <button id="auth-login" type="button" class="button" disabled>Sign in with Google</button>
+    <button id="auth-logout" type="button" class="button" hidden>Logout</button>
+    <button id="auth-retry" type="button" class="button" hidden>Retry login setup</button>
+  </section>
+  <section class="panel prototype-tools" aria-labelledby="measurement-heading">
+    <h2 id="measurement-heading">Room measurement prototype</h2>
+    <p>Measure the distance between two surface points on a supported Android WebXR device. Estimates only; this does not check or guarantee sofa fit. iPhone Quick Look does not support this flow.</p>
+    <button id="measurement-open" class="button" type="button">Open measurement</button>
+  </section>
+  <section id="measurement-panel" hidden aria-labelledby="measurement-title"><div class="ar-sheet">
+    <h2 id="measurement-title">Two-point measurement</h2>
+    <p>Move slowly to find a surface. Aim the ring and tap once for each endpoint.</p>
+    <p id="measurement-status" role="status"></p>
+    <p id="measurement-distance" role="status">No distance measured.</p>
+    <p class="small">Estimated straight-line distance, not furniture fit or verified physical accuracy.</p>
+    <button id="measurement-start" class="button dark" type="button" disabled>Start measurement</button>
+    <button id="measurement-reset" class="button" type="button" disabled>Reset</button>
+    <button id="measurement-exit" class="button" type="button">Exit measurement</button>
+  </div></section>
+  <footer><a class="brand" href="#">RumAI</a><p>Make space for what feels like home.</p><span>Prototype / 01</span></footer>
+  <dialog id="feature-dialog"><form method="dialog"><button class="close" aria-label="Close dialog">×</button><p class="eyebrow">A little further down the road</p><h2 id="dialog-title"></h2><p id="dialog-description"></p><button class="button dark">Back to the collection</button></form></dialog>
+  <dialog id="sofa-viewer" aria-labelledby="viewer-title"><button id="viewer-close" class="close" aria-label="Close 3D viewer">×</button><p class="eyebrow">Explore the form</p><h2 id="viewer-title">Sofa in 3D</h2><p id="viewer-source" class="small"></p><div id="viewer-canvas"></div><p id="viewer-status" role="status">Loading viewer…</p><button id="viewer-reset" class="button dark" disabled>Reset view</button><p id="viewer-dimensions" class="small"></p></dialog>
+  <section id="ar-panel" hidden aria-labelledby="ar-title"><div class="ar-sheet"><button id="ar-close" class="close" aria-label="Exit AR panel">×</button><p class="eyebrow">Place in your space</p><h2 id="ar-title">Sofa in AR</h2><p id="ar-asset" class="small"></p><p id="ar-status" role="status"></p><button id="ar-start" class="button dark" disabled>Start AR</button> <button id="ar-fallback" class="button">View in 3D instead</button></div></section>
+  <dialog id="quick-look-dialog" aria-labelledby="quick-look-title"><button id="quick-look-close" class="close" aria-label="Close AR options">×</button><h2 id="quick-look-title">Sofa in AR</h2><p class="small">Shared sample sofa, not the selected product. Physical scale and room fit are unverified.</p><p id="quick-look-status" role="status"></p><a id="quick-look-start" rel="ar" class="button dark" aria-label="Start AR" hidden><img src="assets/sofa.jpg" alt="Start AR" width="48" height="36"></a><button id="quick-look-fallback" class="button">View in 3D instead</button></dialog>
+<script type="module">
+const { openViewer } = await import('./forma-preview-viewer.js');
+
+const catalogue = await fetch('./catalogue.json').then(r => r.json());
+const ITEM = catalogue.find(x => x.itemId === 'SOFA-MIN-1');
+
+ITEM.gltfURL = 'assets/sofas/minimalist/sofa-min-1.glb';
+ITEM.width = 210.00001430511475;
+ITEM.height = 63.94944190979004;
+ITEM.depth = 82.91618824005127;
+
+await openViewer(ITEM);
+
+document.querySelector('#viewer-title').textContent =
+  'Forma - permanent preview';
+
+document.querySelector('#viewer-source').textContent =
+  'FurniMesh source, RumAI Ivory/oak staging adaptation. Drag to rotate; scroll to zoom; right-drag to pan toward feet; Reset view restores framing.';
+
+document.querySelector('#viewer-dimensions').textContent =
+  'Prototype bounds W/H/D: 2.10 / 0.6395 / 0.8292 m. Preview ground is exactly Y=0. Centre support contacts ground; corner feet retain approximately 9 mm clearance.';
+</script>
+</body>
+</html>
+
